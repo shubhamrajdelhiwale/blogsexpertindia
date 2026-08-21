@@ -570,7 +570,7 @@ const articleMarkdown = `
 
 # Bacardi Limon Price in India 2026: Latest State-Wise Prices, Bottle Sizes, Taste and Complete Guide
 
-**Bacardi Limon Price in India:** The price varies by state, city, bottle size and the latest applicable excise rates.
+**Bacardi Limon Price in India:** For the latest Bacardi Limon price details, check our complete price guide at [bacardi limon price in india](https://liquormrp.com/bacardi-limon-price-in-india-2026/).
 
 **750ml Price Range:** Approximately ₹700 to ₹1,800 across the markets covered in this guide.
 
@@ -865,6 +865,10 @@ function renderMarkdown(md) {
      .replace(/>/g, '&gt;');
 
   let html = escapeHtml(md.trim());
+  html = html.replace(
+  /\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+  '<a href="$2" target="_blank" class="text-[#8b2635] font-semibold hover:underline">$1</a>'
+);
 
   html = html.replace(
     /^### (.+)$/gm,

@@ -843,7 +843,11 @@ function renderMarkdown(md) {
 
 document.getElementById('articleContent').innerHTML = renderMarkdown(articleMarkdown);
 
-document.getElementById('articleContent').innerHTML = document.getElementById('articleContent').innerHTML.replace(/<strong>vivo t5 5g price<\/strong>/i, '<a href="https://goalmoneytrack.com/vivo-t5-5g-price-specifications/"><strong>vivo t5 5g price</strong></a>');
+document.getElementById('articleContent').innerHTML =
+document.getElementById('articleContent').innerHTML.replace(
+  /\bVivo T5 5G price\b/i,
+  '<a href="https://goalmoneytrack.com/vivo-t5-5g-price-specifications/">vivo t5 5g price</a>'
+);
 
 document.getElementById('menuBtn').addEventListener('click', () => {
   document.getElementById('navMenu').classList.toggle('hidden');

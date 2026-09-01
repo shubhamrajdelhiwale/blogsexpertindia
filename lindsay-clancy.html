@@ -1471,7 +1471,7 @@ function renderMarkdown(md) {
 
   html = html.replace(
     /\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
-    '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[#8b2635] font-semibold hover:underline">$1</a>'
+    '<a href="$2" class="text-[#8b2635] font-semibold hover:underline">$1</a>'
   );
 
   html = html.replace(
